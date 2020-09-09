@@ -1,0 +1,44 @@
+@import 'bootstrap/bootstrap';
+@import 'mixins';
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Ubuntu", sans-serif;
+    min-height: 100%;
+    font-size: 14px;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1140px;
+    width: 96%;
+}
+.logo {
+    width: 190px;
+    @media screen and (max-width: 896px) {
+        margin-top: 10px;
+        width: 130px;
+     }
+}
+
+.header {
+    height: 93px;
+}
+.mobile {
+    color: $primary;
+    border: 1px solid $primary;
+    padding: 10px;
+    border-radius: 25px;
+   
+}
+.mobile:hover,
+.mobile:focus {
+    transform: scale(1.1);
+}
