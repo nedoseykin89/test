@@ -7248,10 +7248,10 @@ h3 {
 
 .description li:not(:last-child):after {
   content: "";
-  background-image: url(../img/line.png);
   width: 2px;
   height: 19px;
   position: absolute;
+  background-color: #64B42D;
   left: 22px;
   margin-top: 25px; }
 
