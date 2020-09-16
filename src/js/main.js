@@ -1,5 +1,8 @@
 //= lib/jquery.js
+//= lib/lightzoom.js
 ///= lib/slick.js
+//= lib/slick.min.js
+
 //= lib/popper.js
 /// = lib/isotope.js
 
@@ -8,13 +11,13 @@
 //= bootstrap/dropdown.js
 
 ///= bootstrap/alert.js
-///= bootstrap/button.js
+//= bootstrap/button.js
 ///= bootstrap/carousel.js
-///= bootstrap/modal.js
+//= bootstrap/modal.js
 ///= bootstrap/popover.js
 ///= bootstrap/scrollspy.js
-///= bootstrap/tab.js
+//= bootstrap/tab.js
 ///= bootstrap/toast.js
 ///= bootstrap/tooltip.js
-
+//= script-map.js
 //= scripts.js

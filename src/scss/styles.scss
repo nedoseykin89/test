@@ -1,5 +1,6 @@
 @import 'bootstrap/bootstrap';
 @import 'mixins';
+@import 'slider';
 
 * {
     box-sizing: border-box;
@@ -11,34 +12,380 @@ html {
 
 body {
     font-family: "Ubuntu", sans-serif;
+    color: $secondary;
     min-height: 100%;
     font-size: 14px;
+}
+h2, h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
 }
 
 .container {
     margin: 0 auto;
     max-width: 1140px;
-    width: 96%;
+    padding: 0;
+}
+///////header//////////
+.header {
+    height: 93px;
+    position: relative;
 }
 .logo {
     width: 190px;
-    @media screen and (max-width: 896px) {
-        margin-top: 10px;
-        width: 130px;
+    @media screen and (max-width:612px) {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 40%;
      }
 }
 
-.header {
-    height: 93px;
-}
+
 .mobile {
     color: $primary;
     border: 1px solid $primary;
     padding: 10px;
     border-radius: 25px;
-   
+    @media screen and (max-width:612px) {
+        position: absolute;
+        top: 35%;
+        right: 3%;
+        padding: 5px;
+        margin: 0;
+     }
 }
 .mobile:hover,
 .mobile:focus {
     transform: scale(1.1);
 }
+////////////section 1 robo-request//////////////
+.registration {
+    position: relative;
+}
+.rpic {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+.request {
+    min-width: 190px;
+    border-radius: 30px;
+    padding: 12px 25px;
+    letter-spacing: 1.7px;
+    border: 3px solid $primary;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  }
+  .logo2 {
+      max-width: 295px;
+      
+  }
+  
+  .info {
+      letter-spacing: 1.3px;
+  }
+
+.request:hover,
+.request:active,
+.request:focus {
+    background: rgba(104, 180, 45, 0.8);
+}
+.logotipes {
+    min-width: 300px;
+}
+@media screen and (max-width: 768px) {
+    .misto-block {
+        display: flex;
+        align-items: center;
+    }
+    .rpic {
+        position: relative;
+        width: 100%;
+
+    }
+    .heading {
+        text-align: center;
+        font-size: 2.2rem;
+    }
+    .first-button {
+        position: absolute;
+        bottom: -60%;
+    }
+ }
+/////////section 2 courses////////
+.courses {
+
+    background-image: linear-gradient(to top, rgb(255, 255, 255), rgb(253, 253, 253), rgb(251, 251, 251), rgb(250, 250, 250), rgb(248, 248, 248), rgb(246, 246, 246), rgb(244, 244, 244), rgb(242, 242, 242), rgb(240, 240, 240), rgb(239, 239, 239), rgb(237, 237, 237), rgb(235, 235, 235));
+}
+.robo-block {
+    position: relative;
+    background-color: #fff;
+    width: 350px;
+    height: 540px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.22);
+    border-radius: 30px;
+}
+.robo-block:hover,
+.robo-block:active,
+.robo-block:focus {
+    cursor: pointer;
+    transform: scale(1.01);
+    box-shadow: 0 7px 7px rgba(0,0,0,0.25), 0 7px 7px rgba(0,0,0,0.22);
+}
+.age {
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25), 0 5px 10px rgba(0,0,0,0.22);
+}
+.slide__head {
+    box-shadow:  0 3px 0  rgba(0,0,0,0.11);
+    max-height: 180px;
+}
+.arrow:hover {
+    opacity: .7;
+}
+.term {
+    font-size: 1.2rem;
+    color: #919191;
+}
+.button {
+    width: 172px;
+    height: 42px;
+    border-radius: 30px;
+    letter-spacing: 1.7px;
+    border: 3px solid $yellow;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.button:hover,
+.button:active,
+.button:focus {
+    background: #FBC901;
+    opacity: .8;
+}
+
+.robohand {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.courses-img {
+    position: absolute;
+    top: 15%;
+    right: 3%;
+}
+.stock {
+    width: 121px;
+    height: 22px;
+    font-weight: normal;
+    border-radius: 30px;
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+.price-box {
+    max-height: 50px;
+}
+.slide-p {
+    line-height: 1.3;
+}
+ .subtitle {
+    color: #919191;
+    font-size: 18px;
+    line-height: 150%;
+ }
+ @media screen and (max-width: 648px) {
+    .courses-head {
+        display: flex;
+        flex-direction: column;
+    }
+    .arrows {
+        text-align: center;
+    }
+    
+        }
+ //////////////section introduct////////////////////
+.bonus {
+    border-radius: 30px;
+    width: 81px;
+    height: 22px;
+}
+
+.socials svg {
+    color: #919191; 
+    
+}
+.socials svg:hover,
+.socials svg:active,
+.socials svg:focus {
+    color: $primary; 
+    transform: scale(1.1);
+    
+}
+.description  {
+    height: 380px;
+    line-height: 1.2;
+}
+.description li::before {
+    content: "";
+    background-image: url(../img/list.png);
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 15px;
+    
+}
+.description li:not(:last-child):after {
+    content: "";
+    background-image: url(../img/line.png);
+    width: 2px;
+    height: 19px;
+    position: absolute;
+    left: 22px;
+    margin-top: 25px;
+    
+}
+.description li {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.title-mob {
+    @media screen and (max-width: 540px) {
+        font-size: 1.5rem;
+        text-align: center;
+        }
+}
+
+.bonus {
+    @media screen and (max-width: 640px) {
+       margin: 0 auto;
+        }
+}
+////////////////////////section numbers//////////////////////////////
+.numbers {
+    position: relative;
+}
+.number {
+    font-size: 9rem;
+    font-weight: bold;
+    color: #c3c3c3;
+    line-height: .7;
+}
+.number-lists {
+    font-size: 1.1rem;
+    
+}
+.number-text {
+    max-width: 256px;
+    
+}
+.number-text {
+    @media screen and (max-width: 1155px) {
+        max-width: 456px;
+        }
+}
+
+.lego {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 30%;
+}
+.lego {
+    @media screen and (max-width: 1125px) {
+        width: 50%;
+        top: 0;
+        }
+}
+.lego {
+    @media screen and (max-width: 648px) {
+        width: 100%;
+        top: -10%;
+        }
+}
+.lego2 {
+    position: absolute;
+    top: 10%;
+    right: 0%;
+    width: 30%;
+}
+.lego2 {
+    @media screen and (max-width: 1125px) {
+        width: 50%;
+        top: 20%;
+        }
+}
+.lego2 {
+    @media screen and (max-width: 648px) {
+        width: 100%;
+        top: 40%;
+        }
+}
+////////////////////////////section teaches///////////////////
+.teachers {
+position: relative;
+height: 450px;
+}
+.teacher {
+    position: relative;
+    width: 200px;
+    height: 200px;
+ 
+}
+.teachers, .numbers, .activity, .subscription, .contacts, .questions {
+    @media screen and (max-width: 1024px) {
+        text-align: center;
+        }
+}
+//////////////////////section foto/////////////////
+.item img {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+}
+//////////////////////section subscription//////////
+.btn-center {
+    @media screen and (max-width: 1024px) {
+        margin: 10px auto;
+        }
+}
+.pic {
+    @media screen and (max-width: 600px) {
+        width: 80%;
+        }
+}
+///////////////////section statistics/////////////
+
+.numb {
+    font-size: 6rem;
+    line-height: .7;
+    text-align: center;
+    @media screen and (max-width: 600px) {
+        font-size: 4rem;
+        }
+}
+.designation {
+    font-size: 1.5rem;
+    text-align: center;
+    @media screen and (max-width: 600px) {
+        font-size: 1rem;
+        }
+}
+.contact-info p {
+    margin-bottom: 0;
+}
+////////////////////section contacts ////////
+.firstHeading {
+    color: $primary;
+}
+.footer-socials {
+    @media screen and (max-width: 1024px) {
+       display: flex;
+       justify-content: center;
+        }
+}
+
+
+
+
+

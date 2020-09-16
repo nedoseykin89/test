@@ -18,10 +18,12 @@
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
   @include transition($btn-transition);
-
+  border-radius: 30px;
   @include hover() {
     color: $body-color;
     text-decoration: none;
+    // opacity: .7;
+    // border: 2px solid #519921;
   }
 
   &:focus,

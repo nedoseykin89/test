@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: space-between; // space out brand from logo
   padding: $navbar-padding-y $navbar-padding-x;
-  
+  z-index: 998;
   // Because flex properties aren't inherited, we need to redeclare these first
   // few properties so that content nested within behave properly.
   %container-flex-properties {
@@ -75,6 +75,7 @@
   margin-bottom: 0;
   list-style: none;
   border-radius: 0 0 10px 10px;
+  z-index: 998;
   .nav-link {
     padding-right: 0;
     padding-left: 0;
@@ -120,7 +121,7 @@
   padding: $navbar-toggler-padding-y $navbar-toggler-padding-x;
   @include font-size($navbar-toggler-font-size);
   line-height: 1;
-  z-index: 1;
+  z-index: 999;
   background-color: transparent; // remove default button style
   border: $border-width solid transparent; // remove default button style
   
