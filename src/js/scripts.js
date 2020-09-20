@@ -1,7 +1,8 @@
 (function() {
   'use strict';
-if (window.innerWidth <= 767) {
+if (window.innerWidth <= 768) {
     document.getElementById("robopic").src = "img/robopic-mini.png";
+    document.getElementById("logo-header").src = "img/logo-mobil.png";
   }
 
   $(document).ready(function(){
@@ -9,11 +10,11 @@ if (window.innerWidth <= 767) {
     var cur_width = $(window).width();
 
     $(window).resize(function(){
-        if($(window).width() <= 767 && cur_width > 767){
+        if($(window).width() <= 768 && cur_width > 768){
             //reload
             location.reload();
         }
-        else if($(window).width() > 767 && cur_width <= 767){
+        else if($(window).width() > 768 && cur_width <= 768){
             //reload
             location.reload();
         }
@@ -89,7 +90,7 @@ $('.slider').slick({
   });
   ////////////////slider 3 fotos////////////////
   $('.slider-fotos').slick({
-    dots:false,
+    dots:true,
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -113,4 +114,18 @@ $('.slider').slick({
       }, false);
     });
   }, false);
+
+///////header nav/////
+const navbar = document.querySelector(".navbar");
+navbar.querySelector(".toggle").addEventListener("click", () => {
+  navbar.classList.toggle("collapsed");
+});
+window.addEventListener("scroll", e => {
+  let windowY = window.pageYOffset;
+  let navbarHeight = document.querySelector(".navbar").offsetHeight;
+  if (windowY > navbarHeight) navbar.classList.add("sticky");
+  else navbar.classList.remove("sticky");
+});
+
+
 })();

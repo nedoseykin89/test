@@ -126,8 +126,8 @@
   .slick-dots li button {
     line-height: 0;
     display: block;
-    width: 10px;
-    height: 10px;
+    width: 15px;
+    height: 15px;
     cursor: pointer;
     color: transparent;
     border: 0;
@@ -135,7 +135,10 @@
     margin: 10px;
     list-style: none;
     background: url(../img/off.png) no-repeat 0 0 / contain;
+    @media screen and (max-width: 648px) {
+        display: none;
    
+     }
 }
 .slick-dots li button:hover {
     background: url(../img/on.png) no-repeat 0 0 / contain;
@@ -144,17 +147,26 @@
 .slick-dots {
     transform: rotate(-90deg);
     position: absolute;
-    left: 45%;
-    top: -18%;
-    @media screen and (max-width: 648px) {
-      padding: 10px;
-      margin: 0 auto;
+    left: 47%;
+    top: -20%;
 
-  }
+}
+.slider-fotos .slick-dots {
+    transform: rotate(-90deg);
+    position: absolute;
+    left: 47%;
+    top: -13%;
+
 }
 .next, .prev {
     outline: none;
+    vertical-align: middle;
+    margin-top: 15px;
+    @media screen and (max-width: 648px) {
+        margin-bottom: 15px;
+    }
 }
+
 .prev2 {
     position: absolute;
     left: 5%;

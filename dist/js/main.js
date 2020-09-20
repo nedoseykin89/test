@@ -122,7 +122,7 @@
 
      setPadding : function (title) {
        var padding = 0,
-        backgroundColor = this.settings.imgPadding > 0 ? "#FFF" : "none",
+        backgroundColor = this.settings.imgPadding > 0 ? "#64B42D" : "none",
         imgCss = {};
 
        if ( this.settings.viewTitle && title ) {
@@ -5259,160 +5259,10 @@ initMap = function() {
     mapTypeControl: true,
     styles: [
       {
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#f5f5f5"
-          }
-        ]
-      },
-      {
         elementType: "labels.icon",
         stylers: [
           {
             visibility: "off"
-          }
-        ]
-      },
-      {
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#616161"
-          }
-        ]
-      },
-      {
-        elementType: "labels.text.stroke",
-        stylers: [
-          {
-            color: "#f5f5f5"
-          }
-        ]
-      },
-      {
-        featureType: "administrative.land_parcel",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#bdbdbd"
-          }
-        ]
-      },
-      {
-        featureType: "poi",
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#eeeeee"
-          }
-        ]
-      },
-      {
-        featureType: "poi",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#757575"
-          }
-        ]
-      },
-      {
-        featureType: "poi.park",
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#e5e5e5"
-          }
-        ]
-      },
-      {
-        featureType: "poi.park",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#9e9e9e"
-          }
-        ]
-      },
-      {
-        featureType: "road",
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#ffffff"
-          }
-        ]
-      },
-      {
-        featureType: "road.arterial",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#757575"
-          }
-        ]
-      },
-      {
-        featureType: "road.highway",
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#dadada"
-          }
-        ]
-      },
-      {
-        featureType: "road.highway",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#616161"
-          }
-        ]
-      },
-      {
-        featureType: "road.local",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#9e9e9e"
-          }
-        ]
-      },
-      {
-        featureType: "transit.line",
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#e5e5e5"
-          }
-        ]
-      },
-      {
-        featureType: "transit.station",
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#eeeeee"
-          }
-        ]
-      },
-      {
-        featureType: "water",
-        elementType: "geometry",
-        stylers: [
-          {
-            color: "#c9c9c9"
-          }
-        ]
-      },
-      {
-        featureType: "water",
-        elementType: "labels.text.fill",
-        stylers: [
-          {
-            color: "#9e9e9e"
           }
         ]
       }
@@ -5421,8 +5271,7 @@ initMap = function() {
 
   marker = new google.maps.Marker({
     position: center,
-    map: map
-            
+    map: map 
   });
            var contentmark = '<div id="content">'+
           '<div id="siteNotice">'+
@@ -5440,8 +5289,9 @@ initMap = function() {
 };
 (function() {
   'use strict';
-if (window.innerWidth <= 767) {
+if (window.innerWidth <= 768) {
     document.getElementById("robopic").src = "img/robopic-mini.png";
+    document.getElementById("logo-header").src = "img/logo-mobil.png";
   }
 
   $(document).ready(function(){
@@ -5449,11 +5299,11 @@ if (window.innerWidth <= 767) {
     var cur_width = $(window).width();
 
     $(window).resize(function(){
-        if($(window).width() <= 767 && cur_width > 767){
+        if($(window).width() <= 768 && cur_width > 768){
             //reload
             location.reload();
         }
-        else if($(window).width() > 767 && cur_width <= 767){
+        else if($(window).width() > 768 && cur_width <= 768){
             //reload
             location.reload();
         }
@@ -5529,7 +5379,7 @@ $('.slider').slick({
   });
   ////////////////slider 3 fotos////////////////
   $('.slider-fotos').slick({
-    dots:false,
+    dots:true,
     arrows: true,
     slidesToShow: 1,
     slidesToScroll: 1,
@@ -5553,4 +5403,18 @@ $('.slider').slick({
       }, false);
     });
   }, false);
+
+///////header nav/////
+const navbar = document.querySelector(".navbar");
+navbar.querySelector(".toggle").addEventListener("click", () => {
+  navbar.classList.toggle("collapsed");
+});
+window.addEventListener("scroll", e => {
+  let windowY = window.pageYOffset;
+  let navbarHeight = document.querySelector(".navbar").offsetHeight;
+  if (windowY > navbarHeight) navbar.classList.add("sticky");
+  else navbar.classList.remove("sticky");
+});
+
+
 })();

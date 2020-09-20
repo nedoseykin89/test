@@ -120,7 +120,7 @@
 
      setPadding : function (title) {
        var padding = 0,
-        backgroundColor = this.settings.imgPadding > 0 ? "#FFF" : "none",
+        backgroundColor = this.settings.imgPadding > 0 ? "#64B42D" : "none",
         imgCss = {};
 
        if ( this.settings.viewTitle && title ) {

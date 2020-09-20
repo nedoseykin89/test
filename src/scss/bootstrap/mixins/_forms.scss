@@ -52,7 +52,7 @@
 
   .#{$state}-tooltip {
     position: absolute;
-    left: 60%;
+    left: 0;
     z-index: 5;
     display: none;
     max-width: 100%; // Contain to parent when possible
